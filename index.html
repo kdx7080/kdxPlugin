@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/slideMenu.css" />
+		<link rel="stylesheet" href="css/latterListSelecter.css" />
+		<style>
+		
+		</style>
+	</head>
+
+	<body>
+		<div class="slide_menu_container">
+			<div class="slide_menu"></div>
+			<div class="page_container">
+				<div class="btn" style="width: 60px;height: 60px;background: white;">我</div>
+				<div class="letter_list_selecter"></div>
+				<div class="listContainer" style="width: 100%;height: 600px;"></div>
+			</div>
+		</div>
+	</body>
+
+	<script type="text/javascript" src="js/plugin/jquery-2.1.0.js"></script>
+	<script type="text/javascript" src="js/plugin/chinese2Pinyin.js"></script>
+	<script type="text/javascript" src="js/plugin/slideMenu.js"></script>
+	<script type="text/javascript" src="js/plugin/appScroll.js"></script>
+	<script type="text/javascript" src="js/plugin/letterListSelecter.js" ></script>
+	<script type="text/javascript">
+		var letterList = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
+
+		$(function() {
+			var slideMenu = new SlideMenu($('.btn').get(0));
+			var appScroll = new AppScroll('.listContainer');
+			var letterListSelecter = new LetterListSelecter('.page_container', '.listContainer');
+			//初始化一个字母列表
+			for(var i = 0; i < letterList.length; i++) {
+				$('<div>' + letterList[i] + '</div>')
+					.attr('letterName', letterList[i])
+					.css({
+						'line-height': '60px',
+						'text-align': 'center',
+						'font-size': '18px'
+					})
+					.appendTo('.listContainer');
+			}
+		});
+	</script>
+
+</html>

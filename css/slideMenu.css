@@ -1,0 +1,34 @@
+.slide_menu_container {
+	position: relative;
+	background: white;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+.page_container {
+	position: relative;
+	background: goldenrod;
+	height: 300px;
+	float: left;
+}
+
+.page_container .shade {
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: rgba(225, 225, 225, 0.5);
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.slide_menu {
+	position: relative;
+	/*width: 50%;*/
+	/*background: blueviolet;*/
+	height: 300px;
+	float: left;
+}

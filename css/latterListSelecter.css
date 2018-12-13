@@ -1,0 +1,23 @@
+	.letter_list_selecter {
+		width: 30px;
+		background: white;
+		position: fixed;
+		height: 100px;
+		line-height: 30px;
+		z-index: 99;
+		right: 0;
+		top: 0;
+	}
+	
+	.letter_list_selecter .letter {
+		width: 100%;
+		/*background: white;*/
+		position: relative;
+		line-height: 30px;
+		/*text-align: center;*/
+		font-size: 14px;
+		display: flex;
+		align-content: center;
+		justify-content: center;
+		color: #666666;
+	}

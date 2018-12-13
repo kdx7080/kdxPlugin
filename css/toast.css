@@ -1,0 +1,14 @@
+.kdx_toast {
+	position: fixed;
+	background: rgba(0, 0, 0, 0.6);
+	/*background: red;*/
+	text-align: center;
+	line-height: 30px;
+	border-radius: 5px;
+	color: white;
+	padding: 0px 10px 0px 10px;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	display: none;
+	z-index: 99;
+}

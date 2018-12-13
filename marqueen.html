@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="css/slideMenu.css" />
+		<link rel="stylesheet" href="css/latterListSelecter.css" />
+		<style>
+			.kdx_marqueen {
+				width: 100px;
+				background: greenyellow;
+				overflow: hidden;
+				line-height: 50px;
+				position: relative;
+				/*display: flex;
+				justify-content: center;
+				align-items: center;*/
+			}
+			
+			.kdx_marqueen .inside {
+				position: relative;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			/*.kdx_marqueen:hover {
+				-webkit-animation: marqueen 2s;
+			-webkit-animation-duration: 1s;
+			-webkit-animation-name: marqueen;
+			-webkit-animation-timing-function: linear;
+		}*/
+			/*@-webkit-keyframes marqueen {
+			0% {}	
+			100% {}
+		}*/
+		</style>
+	</head>
+
+	<body>
+		<div class="kdx_marqueen">孔德先</div>
+	</body>
+
+	<script type="text/javascript" src="js/plugin/jquery-2.1.0.js"></script>
+	<script type="text/javascript">
+		new KMarqueen('.kdx_marqueen');
+
+		function KMarqueen(dom) {
+			//这里需要的条件是需要滚动的文字总长度不超过原div的两倍
+
+			var $dom = $(dom);
+			//原元素的宽高
+			var dw = $dom.width();
+			var dh = $dom.height();
+			//将目标div中的内容提取到一个新建的内部容器中
+			var html = $dom.html();
+			$dom.html('');
+			var $inside1 = $('<div class="inside"></div>')
+				.append(html)
+				.css({
+					'width': dw + 'px'
+				})
+				.appendTo($dom);
+			var $inside2 = $('<div class="inside"></div>')
+				.append(html)
+				.css({
+					'width': dw + 'px'
+				})
+				.appendTo($dom);
+			//设置定时器
+			setInterval(function() {
+				//				$inside.css('left','0px');
+				//				$inside.animate({'left':-dw+'px'},1000);
+			}, 1000);
+		}
+	</script>
+
+</html>
